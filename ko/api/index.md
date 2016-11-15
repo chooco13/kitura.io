@@ -7,7 +7,7 @@ lang: ko
 
 <div class="titleBlock">
   <h1>API reference</h1>
-  <p>Kitura is a modular web framework.<br>It is based on a core module with additional pluggable modules.<br>Click below to view the API reference documentation for each module.</p>
+  <p>Kitura 는 모듈화 된 웹 프레임워크입니다.<br>코어 모듈과 추가적으로 장착가능한 모듈들을 기반으로 동작합니다.<br>각 모듈에 대한 API reference 문서는 아래에서 확인해주세요.</p>
 </div>
 
 ## Core
