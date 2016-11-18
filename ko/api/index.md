@@ -7,7 +7,7 @@ lang: ko
 
 <div class="titleBlock">
   <h1>API reference</h1>
-  <p>Kitura ´Â ¸ðµâÈ­ µÈ À¥ ÇÁ·¹ÀÓ¿öÅ©ÀÔ´Ï´Ù.<br>ÄÚ¾î ¸ðµâ°ú Ãß°¡ÀûÀ¸·Î ÀåÂø°¡´ÉÇÑ ¸ðµâµéÀ» ±â¹ÝÀ¸·Î µ¿ÀÛÇÕ´Ï´Ù.<br>°¢ ¸ðµâ¿¡ ´ëÇÑ API reference ¹®¼­´Â ¾Æ·¡¿¡¼­ È®ÀÎÇØÁÖ¼¼¿ä.</p>
+  <p>Kitura ëŠ” ëª¨ë“ˆí™” ëœ ì›¹ í”„ë ˆìž„ì›Œí¬ìž…ë‹ˆë‹¤.<br>ì½”ì–´ ëª¨ë“ˆê³¼ ì¶”ê°€ì ìœ¼ë¡œ ìž¥ì°©ê°€ëŠ¥í•œ ëª¨ë“ˆë“¤ì„ ê¸°ë°˜ìœ¼ë¡œ ë™ìž‘í•©ë‹ˆë‹¤.<br>ê° ëª¨ë“ˆì— ëŒ€í•œ API reference ë¬¸ì„œëŠ” ì•„ëž˜ì—ì„œ í™•ì¸í•´ì£¼ì„¸ìš”.</p>
 </div>
 
 ## Core
