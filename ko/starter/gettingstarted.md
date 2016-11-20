@@ -30,7 +30,7 @@ $ swift package init --type executable
 ```
 
 ---
-<span class="arrow">&#8227;</span> 그러면 `myFirstProject` 내부의 구조는 다음과 같이 될 것입니다.:
+<span class="arrow">&#8227;</span> 그러면 `myFirstProject` 내부의 구조는 다음과 같이 될 것입니다:
 
 <pre>
 myFirstProject
