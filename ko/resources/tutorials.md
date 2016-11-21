@@ -3,7 +3,7 @@
 ### TRANSLATE THE VALUE OF THE title ATTRIBUTE AND UPDATE THE VALUE OF THE lang ATTRIBUTE.
 ### DO NOT CHANGE ANY OTHER TEXT.
 layout: page
-title: Kitura Tutorials
+title: Kitura 튜토리얼
 menu: resources
 lang: ko
 redirect_from: "/resources/tutorial-todo.html"
@@ -11,15 +11,15 @@ redirect_from: "/resources/tutorial-todo.html"
 ---
 
 <div class="titleBlock">
-  <h1>Tutorials</h1>
-  <p>Learn how to use Kitura with these walk-through tutorials</p>
+  <h1>튜토리얼</h1>
+  <p>튜토리얼들을 통해 Kitura 를 어떻게 쓰는지 배워봅시다.</p>
 </div>
 
 ## Routing and Requests
 
 ### [Parsing Requests](/{{ page.lang }}/resources/tutorials/parsingrequests.html)
 
-Learn how to parse query and URL parameters also handle JSON requests.
+어떻게 쿼리와 URL 파라미터들을 파싱하는지, 그리고 어떻게 JSON 리퀘스트를 다루는지 배워봅시다.
 
 ### [Special Types of Response Handlers](/{{ page.lang }}/resources/tutorials/responsehandlers.html)
 

@@ -12,12 +12,12 @@ redirect_from: "/resources/tutorial-todo.html"
 
 <div class="titleBlock">
   <h1>Parsing requests</h1>
-  <p>Examples showing the different ways that data can be parsed in Kitura</p>
+  <p>아래 예제들은 Kitura 를 통해 데이터들이 서로 다른 방식으로 파싱될 수 있다는 것을 보여줍니다.</p>
 </div>
 
 ## Parsing URL Encoded Parameters
 
-You can specify matching to a URL parameter by starting the path name with a "`:`". The name afterwards is the key to the parameter dictionary
+"`:`" 로 시작하는 경로명에 매칭되는 URL 파라미터를 명시할 수 있습니다. 뒤에 있는 name 은 파라미터 딕셔너리의 키입니다.
 
 ```swift
 router.get("/name/:name") { request, response, _ in
@@ -25,13 +25,13 @@ router.get("/name/:name") { request, response, _ in
     try response.send("Hello \(name)").end()
 }
 ```
-This will match to `/name/Bob`, `/name/Joe` but not `/name`
+이 예제는 `/name` 가 아닌 `/name/Bob`, `/name/Joe` 에 매칭될 것입니다.
 
 ---
 
 ## Parsing Query Parameters
 
-You can access query parameters through the `queryParameters` dictionary in `RouterRequest`
+`RouterRequest` 의 `queryParameters` 딕셔너리를 통해 쿼리 파라미터에 접근할 수 있습니다.
 
 ```swift
 router.get("/name") { request, response, _ in
@@ -40,13 +40,13 @@ router.get("/name") { request, response, _ in
 }
 ```
 
-In this example, if the incoming URL `/name?name=Dan`, then the output will be "Hello Dan".
+이 예제에서는, `/name?name=Dan` 이 입력으로 들어오게되면, 화면에 "Hello Dan" 라 출력될 것입니다.
 
 ---
 
 ## Parsing String Posts
 
-For post requests, the post body can be read as a string with the `readString` method.
+post 리퀘스트들의 body 는 `readString` 메소드를 통해 string으로 받을 수 있습니다.
 
 ```swift
 router.post("/name") { request, response, _ in
@@ -59,9 +59,9 @@ router.post("/name") { request, response, _ in
 
 ## Parsing JSON Posts
 
-The built in body parsing middleware can parse a variety of body types including JSON.
+내장된 body 파싱 미들웨어 를 통해 JSON을 포함한 다양한 body 타입들을 파싱할 수 있습니다.
 
-<span class="arrow">&#8227;</span> Import SwiftyJSON by adding it to your `Package.swift` file and by adding `import SwiftyJSON` to the top of your file.
+<span class="arrow">&#8227;</span> `Package.swift` 파일에 SwiftyJSON 를 추가하고 파일 상단에도 `import SwiftyJSON` 를 추가하여 SwiftyJSON 를 임포트하세요
 
 <span class="arrow">&#8227;</span> Specify that the body parser should be run on all paths starting with `/name`
 
