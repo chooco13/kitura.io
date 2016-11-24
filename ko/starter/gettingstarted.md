@@ -40,7 +40,7 @@ myFirstProject
 └── Tests
 </pre>
 
-> ![lightbulb] Swift Package Manager 에 대한 더 많은 정보를 원하시면, [swift.org](https://swift.org/package-manager) 를 방문해주세요.
+> ![info] Swift Package Manager 에 대한 더 많은 정보를 원하시면, [swift.org](https://swift.org/package-manager) 를 방문해주세요.
 
 ---
 <span class="arrow">&#8227;</span> `Package.swift` 에, Kitura 를 프로젝트 dependency에 추가해 주세요.
@@ -51,7 +51,7 @@ import PackageDescription
 let package = Package(
     name: "myFirstProject",
     dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 1)
+        .Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 2)
     ])
 ```
 
@@ -145,5 +145,6 @@ Kitura.run()
 
 [클라우드에 어플리케이션 배포하기](/{{ page.lang }}/starter/deploying.html) 를 배워보세요.
 
-
-[lightbulb]: ../../assets/lightbulb-yellow.png
+[info]: ../../assets/info-blue.png
+[tip]: ../../assets/lightbulb-yellow.png
+[warning]: ../../assets/warning-red.png

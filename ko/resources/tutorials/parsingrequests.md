@@ -63,13 +63,15 @@ router.post("/name") { request, response, _ in
 
 <span class="arrow">&#8227;</span> `Package.swift` 파일에 SwiftyJSON 를 추가하고 파일 상단에도 `import SwiftyJSON` 를 추가하여 SwiftyJSON 를 임포트하세요
 
-<span class="arrow">&#8227;</span> Specify that the body parser should be run on all paths starting with `/name`
+> ![tip] Tip: Kitura가 의존하고 있는 SwiftyJSON 버전과 동일한 버전을 import 하도록 해주세요. SwiftyJSON 버전은 `Packages/Kitura*/Package.swift` 를 살펴보면 찾을 수 있습니다.
+
+<span class="arrow">&#8227;</span> body parser 가 `/name` 으로 시작되는 모든 경로에서 적용되도록 명시해주세요.
 
 ```swift
 router.all("/name", middleware: BodyParser())
 ```
 
-<span class="arrow">&#8227;</span> Specify your path, retrieving the parsed body from the body property.
+<span class="arrow">&#8227;</span> body property 로 부터 parsed body 를 얻기 원하는 경로를 명시해 주세요.
 
 ```swift
 router.post("/name") { request, response, next in
@@ -88,3 +90,7 @@ router.post("/name") { request, response, next in
     next()
 }
 ```
+
+[info]: ../../../assets/info-blue.png
+[tip]: ../../../assets/lightbulb-yellow.png
+[warning]: ../../../assets/warning-red.png
