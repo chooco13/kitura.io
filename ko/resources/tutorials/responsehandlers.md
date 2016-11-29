@@ -12,12 +12,12 @@ redirect_from: "/resources/tutorial-todo.html"
 
 <div class="titleBlock">
 	<h1>Response handlers</h1>
-	<p>Kitura allows a variety of ways to specify handlers in order to express complex behavior</p>
+	<p>Kitura 는 복잡한 경로들도 표현할 수 있도록 다양한 방법의 핸들러를 제공하고 있습니다.</p>
 </div>
 
 ## Multi-handlers
 
-Responses can accept multiple handlers allowing logic to be broken up into sections.
+Response 들은 영역을 나눠서 로직에 따라 여러가지 핸들러를 거칠 수 있습니다.
 
 ```swift
 router.get("foo", handler: { request, response, next in
@@ -34,7 +34,7 @@ router.get("foo", handler: { request, response, next in
 
 ## Multi-HTTP Verbs
 
-Multiple HTTP verbs can be specified for one path using the `route` method.
+`route` 메소드를 이용하여 하나의 경로에 여러개의 HTTP verbs 를 설정할 수 있습니다.
 
 ```swift
 router.route("foo")
@@ -50,7 +50,7 @@ router.route("foo")
 
 ## Sub-routers
 
-A large router can be broken up into sub-routers and be mounted under a path prefix. These sub-routers can even be placed in separate files.
+복잡한 라우터들은 서브라우터들로 나눌 수 있습니다. 서브라우터들은 경로 접두어를 붙일 수 있습니다. 서브라우터들은 여러개의 나눠진 파일에 위치하게 할수도 있습니다.
 
 ```swift
 let subrouter = Router()
@@ -74,4 +74,4 @@ Kitura.addHTTPServer(onPort: 8090, with: mainRouter)
 // start the framework - the servers added until now will start listening
 Kitura.run()
 ```
-A GET request to localhost:8090 will return "Welcome" and a request to localhost:8090/sub will return "Hello from subsection"
+localhost:8090 에 GET request 를 하게되면 "Welcome" 을 반환할 것입니다. 그리고 localhost:8090/sub 에 GET request 를 하게 되면 "Hello from subsection" 를 반환할 것입니다.

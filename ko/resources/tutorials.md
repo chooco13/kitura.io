@@ -23,7 +23,7 @@ redirect_from: "/resources/tutorial-todo.html"
 
 ### [Special Types of Response Handlers](/{{ page.lang }}/resources/tutorials/responsehandlers.html)
 
-Learn how to define response handlers for complex routes.
+복잡한 루트들을 다루기 위한 response 핸들러를 어떻게 정의해야 하는지 배워봅시다.
 
 ### [Writing Custom Paths](/{{ page.lang }}/resources/tutorials/pathsyntax.html)
 
