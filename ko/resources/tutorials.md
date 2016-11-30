@@ -19,15 +19,15 @@ redirect_from: "/resources/tutorial-todo.html"
 
 ### [Parsing Requests](/{{ page.lang }}/resources/tutorials/parsingrequests.html)
 
-어떻게 쿼리와 URL 파라미터들을 파싱하는지, 그리고 어떻게 JSON 리퀘스트를 다루는지 배워봅시다.
+쿼리와 URL 파라미터들을 파싱하는 법, 그리고 JSON 리퀘스트를 다루는 법에 대해 배워봅시다.
 
 ### [Special Types of Response Handlers](/{{ page.lang }}/resources/tutorials/responsehandlers.html)
 
-복잡한 루트들을 다루기 위한 response 핸들러를 어떻게 정의해야 하는지 배워봅시다.
+복잡한 루트들을 다루기 위한 response 핸들러를 정의하는 법을 배워봅시다.
 
 ### [Writing Custom Paths](/{{ page.lang }}/resources/tutorials/pathsyntax.html)
 
-Learn how to define routes using custom paths, including parameters and custom matching with regular expressions.
+파라미터와 정규식을 통한 매칭을 사용하여 원하는 경로에 루트를 정의하는 법에 대해 배워봅시다.
 
 ---
 

@@ -11,15 +11,15 @@ redirect_from: "/resources/tutorials/pathsyntax.html"
 ---
 
 <div class="titleBlock">
-	<h1>Writing Custom Paths</h1>
+	<h1>원하는 경로 작성하기</h1>
 </div>
 
-When hooking up middleware and handlers to your Kitura server, you can customize your paths using Kitura's path syntax. This guide assumes familiarity with the concepts of Kitura app and route handler.
+Kitura 서버의 미들웨어와 핸들러를 연결할 때, Kitura 의 경로 구문을 통해 경로를 원하는대로 설정할 수 있습니다. 이 가이드는 Kitura 앱과 route 핸들러를 알고있다고 가정합니다.
 
 ---
 
 ## Static Paths
-The most basic of paths, static paths, are supported. Simply specify the path as it is when mounting your middleware or handler, like so:
+가장 기본적인 경로인 정적 경로가 지원됩니다. 간단하게 미들웨어나 핸들러가 마운트 할 때 경로를 지정하세요. 다음과 같이 말이죠:
 
 ```swift
 // handler example
@@ -28,12 +28,12 @@ app.get("/test") { req, res, next in
 }
 ```
 
-In this case, the path `/test` will be matched for `/test` only.
+이 경우에, `/test` 경로는 `/test` 에만 연결됩니다.
 
 ---
 
 ## Paths with Parameter(s)
-`Kitura` supports parameters in the path for use cases such as performing CRUD operations against an object. Simply tag the parameter using `:`, like so:
+`Kitura` 는 object에 대한 CRUD 작업을 수행하는 작업을 위해 경로에 파라미터를 사용하는것을 지원합니다. 간단하게 파라미터에 `:` 를 붙이세요. 다음과 같이 말이죠:
 
 ```swift
 app.get("/:id") { req, res, next in
@@ -41,15 +41,14 @@ app.get("/:id") { req, res, next in
     try res.send("Hello world to user \(id)").end()
 }
 ```
-
-In this case, the path `/:id` will be for `/123` as well as `/abc`. You can then access the `id` parameter's value via `req.parameters["id"]`.
+이 경우에, `/:id` 경로는 `/123` 뿐 아니라 `/abc` 에도 적용됩니다. `id` 파라미터의 값은 `req.parameters["id"]`로 접근 할 수 있습니다.
 
 ---
 
 ## Parameter Modifiers
 
 ### <span class="arrow">&#8227;</span> Zero or One
-You can specify that a parameter is optional by using the `?` operator, like so:
+`?` 연산자를 이용하여 파라미터가 옵션이라는 것을 나타낼 수 있습니다. 다음과 같이 말이죠:
 
 ```swift
 app.get("/:id?") { req, res, next in
@@ -58,10 +57,10 @@ app.get("/:id?") { req, res, next in
 }
 ```
 
-In this case, the path `/:id?` will be matched for both `/` and `/123`.
+이 경우에, `/:id` 경로는 `/` 와 `/123` 모두에 적용됩니다.
 
 ### <span class="arrow">&#8227;</span> Zero or Many
-You can specify that a parameter should be matched zero times, or as many times as possible, by using the `*` operator, like so:
+`*` 연산자를 이용하면 0번 매치되는 것도, 또는 여러번 매치되는 것들도 나타낼 수 있습니다. 다음과 같이 말이죠:
 
 ```swift
 app.get("/:id*") { req, res, next in
@@ -70,10 +69,10 @@ app.get("/:id*") { req, res, next in
 }
 ```
 
-In this case, the path `/:id*` will be matched for `/`, `/123`, and `/abc/def/ghi`.
+이 경우에, `/:id*` 경로는 `/`, `/123`, 그리고 `/abc/def/ghi` 에 적용됩니다.
 
 ### <span class="arrow">&#8227;</span> One or Many
-You can specify that a parameter should be matched one or more times by using the `+` operator, like so:
+`+` 연산자를 이용하면 한 번 이상 매치되는 것을 나타낼 수 있습니다. 다음과 같이 말이죠:
 
 ```swift
 app.get("/:id+") { req, res, next in
@@ -82,10 +81,10 @@ app.get("/:id+") { req, res, next in
 }
 ```
 
-In this case, the path `/:id+` will be matched for `/123` and `/abc/def/ghi`, but not `/`.
+이 경우에, `/:id+` 경로는 `123` 과 `/abc/def/ghi` 에는 적용되지만 `/`에는 적용되지 않습니다.
 
 ### <span class="arrow">&#8227;</span> Custom Matching
-In addition to modifying parameters, you can also use regular expressions to specify what kinds of URLs can be matched and captured as parameters. Simply enclose your regex in `()` and append it to the parameter name, like so:
+추가적으로 파라미터를 수정하기 위해서, 어떠한 종류의 URL 을 받기를 원하는지 나타내기 위해 정규식을 사용할 수 있습니다. 간단하게 정규식을 `()` 안에 넣고 변수명 뒤에 덧붙이세요. 다음과 같이 말이죠:
 
 ```swift
 app.get("/:id(\\d+)") { req, res, next in
@@ -94,10 +93,10 @@ app.get("/:id(\\d+)") { req, res, next in
 }
 ```
 
-In this case, the path `/:id(\\d+)` specifies that only digits should be matched; this path will be matched for `/123`, but not `/` or `/abc`.
+이 경우에, `:id(\\d+)` 경로는 오직 숫자들만 적용됩니다; `123` 에는 적용되지만, `/` 이나 `/abc` 에는 적용되지 않습니다.
 
 ### <span class="arrow">&#8227;</span> Unnamed Parameters
-You can use custom matching without naming a parameter, like so:
+변수명을 지정하지 않고도 원하는 매치를 사용할 수 있습니다. 다음과 같이 말이죠:
 
 ```swift
 app.get("/(\\d+)") { req, res, next in
@@ -106,4 +105,4 @@ app.get("/(\\d+)") { req, res, next in
 }
 ```
 
-In this case, the path `/(\\d+)` will be matched for `/123`, but not `/` or `/abc`. The matched parameter can then be referenced via its index; in this case, since this is the first unnamed parameter, its index is `0`.
+이 경우에, `/(\\d+)` 경로는 `/123` 에는 적용되지만 `/` 나 `abc` 에는 적용되지 않습니다. 매치된 파라미터는 인덱스를 통해 사용할 수 있습니다; 이경우에, 첫번째로 변수가 없는 파라미터 이기 때문에, 인덱스는 `0` 입니다.
