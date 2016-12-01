@@ -35,15 +35,15 @@ redirect_from: "/resources/tutorial-todo.html"
 
 ### [Adding Authentication with Kitura-Credentials](/{{ page.lang }}/resources/tutorials/credentials.html)
 
-Learn how to add integration with Facebook OAuth authentication.
+Facebook Oauth 인증을 추가하는 법에 대해 배워봅시다.
 
 ### [Adding Sessions with Kitura-Session](/{{ page.lang }}/resources/tutorials/sessions.html)
 
-Learn how to save user data with a session plugin.
+유저 정보를 세션 플러그인을 이용하여 저장하는 법에 대해 알아봅시다.
 
 ### [Enabling SSL/TLS on Kitura](/{{ page.lang }}/resources/tutorials/ssl.html)
 
-Learn how to enable SSL/TLS on Kitura to enhance the security of your application.
+보안 강화를 위해 SSL/TLS를 적용하는 법에 대해 알아봅시다.
 
 ---
 
@@ -51,8 +51,8 @@ Learn how to enable SSL/TLS on Kitura to enhance the security of your applicatio
 
 ### [Using Templating Engines with Kitura](/{{ page.lang }}/resources/tutorials/templating.html)
 
-This tutorial shows how to use popular templating engines like Mustache and Stencil in Kitura.
+이 튜토리얼은 Mustache 나 Stencil 같은 인기있는 탬플릿 엔진들을 Kitura 에서 어떻게 사용할지를 알려줍니다.
 
 ### [Using FastCGI with Kitura](/{{ page.lang }}/resources/tutorials/fastcgi.html) (Linux only)
 
-Kitura supports FastCGI 1.0 and has been tested with both Nginx and Apache.
+Kitura 는 FastCGI 1.0 을 지원합니다. 또한 Nginx와 Apache에서 테스트 되었습니다
