@@ -63,7 +63,9 @@ router.post("/name") { request, response, _ in
 
 <span class="arrow">&#8227;</span> `Package.swift` 파일에 SwiftyJSON 를 추가하고 파일 상단에도 `import SwiftyJSON` 를 추가하여 SwiftyJSON 를 임포트하세요
 
-> ![tip] Tip: Kitura가 의존하고 있는 SwiftyJSON 버전과 동일한 버전을 import 하도록 해주세요. SwiftyJSON 버전은 `Packages/Kitura*/Package.swift` 를 살펴보면 찾을 수 있습니다.
+> ![warning]
+>
+> 경고: 만약 다른 레포지토리의 것이나 `Packages/Kitura-x.x.x/Package.swift` 에 적혀있는 버전과 다른 버전을 명시하여 다른 버전의 `SwiftyJSON` 를 사용하고 있거다면, 그것을 지워주시고 `Packages/Kitura-x.x.x/Package.swift` 에 명시된 버전을 사용해주세요. 그렇지 않으면, Swift 패키지 매니져가 패키지들을 설치할 때 에러를 발생시킬 것입니다.
 
 <span class="arrow">&#8227;</span> body parser 가 `/name` 으로 시작되는 모든 경로에서 적용되도록 명시해주세요.
 
